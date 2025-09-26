@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website - Gita</title>
+    <title>Portfolio - Gita</title>
 
     <!-- CSS Eksternal -->
     <link rel = "stylesheet" href = "css/style.css">
@@ -11,7 +11,7 @@
     <!-- Tailwind CSS CDN-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class = "body-web">
     <!-- Header Content -->
     <header class="main-header">
         <!-- Logo Website -->
@@ -21,11 +21,11 @@
 
         <!-- Navigation Menu -->
         <nav>
-            <ul class="flex h-[100%] items-center gap-[2px]">
-                <li><a class ="border p-[8px] rounded " href = "#home">Home</a></li>
-                <li><a class ="border p-[8px] rounded " href = "#profile">Profile</a></li>
-                <li><a class ="border p-[8px] rounded " href = "#portfolio">Portfolio</a></li>
-                <li><a class ="border p-[8px] rounded " href = "#message-us">Message Us</a></li>
+            <ul class="flex flex-wrap h-[100%] items-center gap-[2px]">
+                <li><a class ="border p-[8px] rounded bg-lime-500 text-white" href = "#home">Home</a></li>
+                <li><a class ="border p-[8px] rounded bg-lime-500 text-white" href = "#profile">Profile</a></li>
+                <li><a class ="border p-[8px] rounded bg-lime-500 text-white" href = "#portfolio">Portfolio</a></li>
+                <li><a class ="border p-[8px] rounded bg-lime-500 text-white" href = "#message-us">Message Us</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +36,7 @@
         <!-- Home Section -->
          <section id="home" class="min-h-[100vh] flex flex-col items-center justify-center gap-[20px]">
             <h1 class="text-[30px] font-bold">Welcome <span id="username"></span> to Gita's Portfolio</h1>
-            <p class="text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quas.</p>
+            <p class="text-[18px]">This is a portfolio website created by Gita. You can find my profile, portfolio, and send message to me.</p>
          </section>
 
          <hr>
@@ -44,7 +44,16 @@
          <!-- Profile Section -->
          <section id="profile" class="min-h-[100vh] flex flex-col items-center justify-center gap-[20px]">
             <h1 class="text-[30px] font-bold">Profile</h1>
-            <p class="text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quas.</p>
+            <p class="text-[18px] text-justify max-w-[600px] mx-auto leading-relaxed">
+                Hello!<br> I'm <b>Anggita Wahyuningtyas S </b> and you can call me <b>Gita</b>. 
+                I'm a Bachelor Degree of Computer Science from Universitas Bina Nusantara. <br> 
+                I'm also an Associate Degree of Electrical and Electronics Engineering from Politeknik Negeri Ujung Pandang. 
+                Interested in Information Technology. I have a passion for learning and working with new technologies. <br>
+                I'm a quick learner and a problem solver. I love to work with team and solve the problems together. </p>
+
+            <div class = "flex items-center gap-2">
+            <img src= "css/assets/logo_linkedin.png" alt="Linkedin" class="inline-block h-[40px] w-[40px]"> <a href="https://www.linkedin.com/in/anggitaws/" class="text-blue-500 hover:text-blue-600" target="_blank">Anggita Wahyuningtyas S</a> 
+            </div>
          </section>
 
          <hr>
@@ -52,31 +61,56 @@
          <!-- Portfolio Section -->
          <section id="portfolio" class="min-h-[100vh] flex flex-col items-center justify-center gap-[20px]">
             <h1 class="text-[30px] font-bold">Portfolio</h1>
-            <p class="text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quas.</p>
+            <p class="text-[18px]">I have worked many projects especially for school projects. You can find them on my github account. 
+            </p>
+
+            <div class = "flex items-center gap-2">
+            <img src= "css/assets/logo_github.png" alt="Github" class="inline-block h-[40px] w-[40px]"> <a href="https://github.com/anggitaaws" class="text-blue-500 hover:text-blue-600" target="_blank">Anggitaws</a>
+            </div>
+
+            <div class = "max-w-[600px] mx-auto">
+                <p class = "text-[18px] font-bold mb-2">
+                Projects that I have done: </p>
+                <ol class="list-decimal list-outside ml-5 text-[18px] leading-relaxed">
+                    <li> Data Mart Mahasiswa (School Project) </li>
+                    <li> Website for PT.PLN (Final Project)</li>
+                </ol>
+
          </section>
 
          <hr>
 
          <!-- Message Us Section -->
-         <section id="message-us" class="min-h-[100vh] flex flex-col items-center justify-center gap-[20px]">
+         <section id="message-us" class="min-h-[100vh] flex flex-col items-center justify-center gap-[20px] px-5">
             <h1 class="text-[30px] font-bold">Message Us</h1>
-            <p class="text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quas.</p>
-            <form>
+            <p class="text-[18px]">Thank you for visiting this portfolio. If you have any feedback, please don't hesitate to send message to us.</p>
+
+            <div class = "flex flex-col md:flex-row gap-10 w-full justify-center">
+            <!-- Form Message Us -->
+            <form id ="form" class = "w-full md:w-[400px] mx-auto">
                 <div class="mb-[10px]">
                     <label for="name" class="block mb-[5px]">Name:</label>
-                    <input type="text" id="name" name="name" class="border p-[8px] rounded w-[300px]" required>
+                    <input type="text" id="name" name="name" class="border p-[8px] rounded w-full" required>
                 </div>
                 <div class="mb-[10px]">
                     <label for="email" class="block mb-[5px]">Email:</label>
-                    <input type="email" id="email" name="email" class="border p-[8px] rounded w-[300px]" required>
+                    <input type="email" id="email" name="email" class="border p-[8px] rounded w-full" required>
                 </div>
                 <div class="mb-[10px]">
                     <label for="message" class="block mb-[5px]">Message:</label>
-                    <textarea id="message" name="message" class="border p-[8px] rounded w-[300px]" required></textarea>
+                    <textarea id="message" name="message" class="border p-[8px] rounded w-full" required></textarea>
                 </div>
                 <button type="button" onclick="validateForm()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold p-[10px] rounded">Submit</button>
-
             </form>
+
+            <!-- Tampilan Message Us -->
+             <div id="resultBox" class="border p-5 w-full max-w-[400px] hidden mx-auto">
+                <p> <b> Current Time: </b> <span id="currentTime"></span> </p> <br>
+                <p> <b> Name: </b> <span id="resName"></span> </p>
+                <p> <b> Email: </b> <span id="resEmail"></span> </p>
+                <p> <b> Message: </b> <span id="resMessage"></span> </p>
+             </div>
+            </div>
          </section>
 
     </main>
