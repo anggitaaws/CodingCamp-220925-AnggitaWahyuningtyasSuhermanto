@@ -1,0 +1,14 @@
+.logo {
+    height: 75px;
+    background-color: lightgray;
+    width: 75px;
+    border-radius: 50%;
+    background-image: url("assets/logo_gita.png");
+    background-size:cover;
+    background-position: center;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
